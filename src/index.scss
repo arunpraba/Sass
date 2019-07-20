@@ -1,5 +1,10 @@
 $color-dark: #333;
 $color-light: #f1f1f1;
+$bg-yellow:#ffd00f;
+
+body{
+  background:$bg-yellow;
+}
 
 @function boder-bottom-fun($a, $b) {
   @return $a/$b;
