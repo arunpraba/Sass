@@ -1,0 +1,44 @@
+$color-dark: #333;
+$color-light: #f1f1f1;
+
+@function boder-bottom-fun($a, $b) {
+  @return $a/$b;
+}
+
+%li-hover {
+  background-color: darken($color-dark, 20%);
+  color: $color-light;
+}
+
+@mixin link-style {
+  text-decoration: none;
+  color: $color-dark;
+  border-bottom: boder-bottom-fun(20, 10) * 1px solid $color-dark;
+}
+
+nav {
+  background: $color-dark;
+  .navigation {
+    float: left;
+    li {
+      display: inline-block;
+      margin-left: 30px;
+      &:hover {
+        @extend %li-hover;
+      }
+      &:first-child {
+        margin-left: 0px;
+      }
+      a {
+        &:link {
+          @include link-style;
+        }
+      }
+    }
+  }
+
+  .form {
+    float: right;
+    margin-top: 20px;
+  }
+}

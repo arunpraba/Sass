@@ -1,2 +1,0 @@
-# Sass
-Created with CodeSandbox
